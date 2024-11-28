@@ -14,7 +14,7 @@ html{
 /*General Styles*/
 body{
     min-height: 100vh;
-    background-color: rgb(134, 134, 228);
+    background-color: rgb(232, 245, 174);
     font-family: Roboto, sans-serif;
     display: flex;
     flex-direction: column;
@@ -26,36 +26,56 @@ header{
     text-align: center;
     height: 60px;
 }
-h1,h2,h3{
-    font-family: Oswald, sans-serif;
-}
 
-.game-area{
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%;
-    text-align: center;
-}
-.control{
-    display: inline;
-    width: 80px;
-    height: 40px;
-    margin: 2px;
-}
 
 /*main */
 main{
     /*make main take athe srplus space to push footer down*/
     flex: 1 0 auto;
 }
+h1,h2,h3{
+    font-family: Oswald, sans-serif;
+}
+/*game area*/
+.game-area{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    text-align: center;
+}
+.control{
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    margin: 2px;
+}
+#message{
+    height: 20px;
+}
+.player{
+    background-color: lightblue;
+    float: left;
+    width: 45%;
+}
+#player-image{
+    width: 75%;
+}
+.computer{
+    background-color: lightcoral;
+    float: right;
+    width: 45%;
+}
+#computer-image{
+    width: 75%;
+}
 /*footer*/
 footer{
     background-color:crimson;
-    position: absolute;
+    position1: absolute;
     width: 100%;
-    left: 0;
-    bottom: 0;
+    left1: 0;
+    bottom1: 0;
     min-height: 80px;
     padding-top: 5px;
     text-align: center;
