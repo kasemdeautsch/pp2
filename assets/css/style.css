@@ -7,24 +7,53 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    min-height1:100%;
+    position: relative;
+}
 /*General Styles*/
 body{
+    min-height: 100vh;
     background-color: rgb(134, 134, 228);
     font-family: Roboto, sans-serif;
-}
-h1,h2,h3{
-    font-family: Oswald, sans-serif;
+    display: flex;
+    flex-direction: column;
+    color: #3a3a3a;
 }
 /*header*/
 header{
     background-color: rgba(226, 125, 43, 0.973);
 }
+h1,h2,h3{
+    font-family: Oswald, sans-serif;
+}
+#player-image{
+    width: 30%;
+    height: 60%;
+}
+#computer-image{
+    width: 30%;
+    height: 60%;
+}
+.player, .computer{
+    display: inline-block;
+    width: 40%;
+}
+
 
 /*main */
 main{
-
+    /*make main take athe srplus space to push footer down*/
+    flex: 1 0 auto;
 }
 /*footer*/
 footer{
     background-color:crimson;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    min-height: 80px;
+    padding-top: 5px;
+    text-align: center;
 }
