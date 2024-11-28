@@ -23,23 +23,26 @@ body{
 /*header*/
 header{
     background-color: rgba(226, 125, 43, 0.973);
+    text-align: center;
+    height: 60px;
 }
 h1,h2,h3{
     font-family: Oswald, sans-serif;
 }
-#player-image{
-    width: 30%;
-    height: 60%;
-}
-#computer-image{
-    width: 30%;
-    height: 60%;
-}
-.player, .computer{
-    display: inline-block;
-    width: 40%;
-}
 
+.game-area{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    text-align: center;
+}
+.control{
+    display: inline;
+    width: 80px;
+    height: 40px;
+    margin: 2px;
+}
 
 /*main */
 main{
