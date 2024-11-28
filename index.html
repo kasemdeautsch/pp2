@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags for search engines -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Title -->
+    <title>Rock Paper Scissors</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <h1>Rock, Paper, Scissors</h1>
+    </header>
+
+    <!--main content-->
+    <main>
+        <section class="game-area">
+            <div>
+                <p>Choose:</p>
+                <button aria-label="Rock" choice="0" class="control">Rock</button>
+                <button aria-label="Paper" choice="1"class="control">Paper</button>
+                <button aria-label="Scissors" choice="2" class="control">Scissors</button>
+            </div>
+            <div id="message"></div>
+            <div class="player">
+                <h2 class="score">Your score: <span id="player-score">0</span></h2>
+                <img id="player-image" src="" alt="Rock Paper Scissors">
+            </div>
+            <div class="computer">
+                <h2 class="score">Computer score: <span id="computer-score">0</span></h2>
+                <img id="computer-image" src="" alt="Rock Paper Scissors">
+            </div>
+        </section>
+    </main>
+    <!--main content-->
+    <footer>
+        <h2>Rules</h2>
+        <p>Scissors cut Paper - Paper covers Pock - Rock crushes Scissors</p>
+    </footer>
+</body>
+
+</html>
