@@ -82,6 +82,9 @@ h1,h2,h3{
 #computer-image{
     width: 75%;
 }
+.score{
+    margin-bottom: 5px;
+}
 /*footer*/
 footer{
     background-color: rgba(226, 125, 43, 0.973);
