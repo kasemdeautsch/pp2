@@ -4,7 +4,7 @@ const buttons = document.getElementsByTagName("button");
     const computerScore = document.getElementById("computer-score");
     const playerImage = document.getElementById("player-image");
     const computererImage = document.getElementById("computer-image");
-    const choices=['rock','papaer','scissors'];
+    const choices=['rock','paper','scissors'];
 document.addEventListener("DOMContentLoaded", function (){
     //console.log('ok')
     
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function (){
             let playerChoice = this.getAttribute('choice')
             playerImage
             //console.log(playerImage);
-            console.log(playerChoice);
+            //console.log(playerChoice);
             runGame(playerChoice)
 
     })
@@ -22,10 +22,14 @@ document.addEventListener("DOMContentLoaded", function (){
 })
 
 function runGame(playerChoice){
-    console.log('hello');
-    playerImage.src = `assets/images/${choices[playerChoice]}.jpg`
+    //console.log('hello');
+    playerImage.src = `assets/images/${choices[playerChoice]}.png`
      playerImage.alt = `${choices[playerChoice]}`
-     playerImage.style.height = "40%";
+     //playerImage.style.height = "40%";
      //playerImage.style.height = "70px";
+     let rand=Math.floor(Math.random()*choices.length);
+     console.log(rand);
+     computererImage.src = `assets/images/${choices[rand]}.png`
+     computererImage.alt = `${choices[rand]}`
     
 }
