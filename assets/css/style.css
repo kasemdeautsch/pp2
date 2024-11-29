@@ -18,15 +18,23 @@ body{
     font-family: Roboto, sans-serif;
     display: flex;
     flex-direction: column;
-    color: #3a3a3a;
+    color:#3a3a3a;
 }
 /*header*/
 header{
     background-color: rgba(226, 125, 43, 0.973);
     text-align: center;
     height: 60px;
-}
+    color: black;
 
+    
+}
+header h2{
+    margin-top: 10px;
+}
+.player h2, .computer h2{
+    font-size: 1rem;
+}
 
 /*main */
 main{
@@ -71,7 +79,7 @@ h1,h2,h3{
 }
 /*footer*/
 footer{
-    background-color:crimson;
+    background-color: rgba(226, 125, 43, 0.973);
     position1: absolute;
     width: 100%;
     left1: 0;
@@ -79,4 +87,10 @@ footer{
     min-height: 80px;
     padding-top: 5px;
     text-align: center;
+    color: black;
+}
+
+/*Media quiry: tablet and larger(768px and up)*/
+@media screen and (min-width:768px){
+    
 }
