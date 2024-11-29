@@ -26,6 +26,7 @@ header{
     text-align: center;
     height: 60px;
     color: black;
+    margin-bottom: 10px;
 
     
 }
@@ -34,6 +35,10 @@ header h2{
 }
 .player h2, .computer h2{
     font-size: 1rem;
+}
+.game-area p{
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 /*main */
@@ -89,8 +94,18 @@ footer{
     text-align: center;
     color: black;
 }
-
+footer p{
+    font-size: .6rem;
+    font-weight: bold;
+    
+}
 /*Media quiry: tablet and larger(768px and up)*/
 @media screen and (min-width:768px){
-    
+    .player h2, .computer h2 {
+        font-size: 1.5rem;
+    }
+    footer p{
+        font-size: 1rem;
+        font-weight: normal;
+    }
 }
