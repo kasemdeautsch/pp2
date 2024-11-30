@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function (){
     for (let button of buttons){
         button.addEventListener('click',function (){
             let playerChoice = this.getAttribute('choice')
-            playerImage
+            //playerImage
             //console.log(playerImage);
             //console.log(playerChoice);
             runGame(playerChoice)
@@ -19,17 +19,41 @@ document.addEventListener("DOMContentLoaded", function (){
     })
 }
 
-})
+});
 
 function runGame(playerChoice){
-    //console.log('hello');
-    playerImage.src = `assets/images/${choices[playerChoice]}.png`
-     playerImage.alt = `${choices[playerChoice]}`
+    //let x=`123`
+    //console.log(x, typeof x);
+    playerImage.src = `assets/images/${choices[playerChoice]}.png`;
+    //console.log(playerImage.src, typeof playerImage.src)
+     playerImage.alt = `${choices[playerChoice]}`;
+     //console.log(playerImage.alt, typeof playerImage.alt);
      //playerImage.style.height = "40%";
      //playerImage.style.height = "70px";
      let rand=Math.floor(Math.random()*choices.length);
-     console.log(rand);
-     computererImage.src = `assets/images/${choices[rand]}.png`
-     computererImage.alt = `${choices[rand]}`
-    
+     //console.log(rand);
+     computererImage.src = `assets/images/${choices[rand]}.png`;
+     //console.log(computererImage.src, typeof computererImage.src)
+     computererImage.alt = choices[rand];
+     console.log(computererImage.alt, typeof computererImage.alt);
+
+    if(playerImage.alt === "scissors"){
+        if(computererImage.alt === "paper"){
+            message.textContent = "You win!";
+        }else{
+            message.textContent = "Computer wins!";
+        }
+    }else if(playerImage.alt === "paper"){
+        if(computererImage.alt === "rock"){
+            message.textContent = "You win!"
+        }else{
+            message.textContent = "Computer wins!"
+        }
+    }else if(playerImage.alt === "rock"){
+        if(computererImage.alt === "scissors"){
+            message.textContent = "You win!"
+        }else{
+            message.textContent = "Computer wins!"
+        }
+    }
 }
