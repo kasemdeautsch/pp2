@@ -72,7 +72,6 @@ h1,h2,h3{
 }
 #player-image{
     width: 75%;
-    height: auto;
 }
 .computer{
     background-color: #f2040433;
@@ -81,7 +80,6 @@ h1,h2,h3{
 }
 #computer-image{
     width: 75%;
-    height: auto;
 }
 .score{
     margin-bottom: 5px;

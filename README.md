@@ -1,6 +1,6 @@
 
 # Random Rock, Paper, Scissors (game) 
-The Rock, Paper, Scissors game is simple  powerful game that as peofriends, colleaques and family play, they can learn to predict outcomes, understand probabilities, and develop the ability to think ahead.
+The Random Rock, Paper, Scissors game is simple  powerful game that as peofriends, colleaques and family play, they can learn to predict outcomes, understand probabilities, and develop the ability to think ahead.
 It allows people to choose role and find if they winn according to the role of the game.
 The game has totaly true results because the other cchoice is random.
 
@@ -20,7 +20,7 @@ This game targets adults and children as well foster essential skills such as de
 ![](/assets/images/readme/testing/header.png)
 
 - The Game Options
-  - The game options contains a clear instructions an a choice to play Rock, Paper or Scissors  
+  - The game options contain a clear instructions and a choice to play Rock, Paper or Scissors  
   - The choices section is an interactive Buttons that allow the player to click and then choose the 
     appropriate role.
 
@@ -42,19 +42,19 @@ This game targets adults and children as well foster essential skills such as de
      ![](/assets/images/readme/testing/footer.png)
 
 **Features Left to Implement**
-- I would like to extend this game in the future to  **rock paper scissors lizard spock**
+- I would like to extend this game in the future to  **rock paper scissors lizard spock**.
 ## Testing
   - The game works on different web browsers like Chrome, Firefox and Edge.
   - The results are always correct.
   - The web site is responsive and looks good on standard screen sizes using devtools device toolbar.
-  - The header, instructions, options results, and footer text is readable and easy to understand.
+  - The header, instructions, options, results, and footer text is readable and easy to understand.
   
   
   - All Images have the **alt** attribute for the purpose of impared visual users.
   - All Buttons have the **Aria-label** attribute.
   - I included **mete tags** with **keywords** and **description** attribute to enable more
     SEO improvement.
-  - The fonts and colors chosen are clear and easy to understand and accesable by running it 
+  - The fonts and colors chosen are clear and easy to understand and accessible by running it 
      in the lighthouse in DevTools.
   - I chosed  a color that is almost light brown for both header and footer
      with a color that is close to it on the body also.  
