@@ -54,8 +54,12 @@ This game targets adults and children as well foster essential skills such as de
   - All Buttons have the **Aria-label** attribute.
   - I included **mete tags** with **keywords** and **description** attribute to enable more
     SEO improvement.
-  - The fonts and colors choosen are clear and easy to understand and accesable by running it 
+  - The fonts and colors chosen are clear and easy to understand and accesable by running it 
      in the lighthouse in DevTools.
+  - I chosed  a color that is almost light brown for both header and footer
+     with a color that is close to it on the body also.  
+
+
      ![](/assets/images/readme/testing/testing.png)
      ![](/assets/images/readme/testing/testing2.png)
      
@@ -98,11 +102,8 @@ This game targets adults and children as well foster essential skills such as de
     - The live link can be found [here](https://github.com/kasemdeautsch/pp2).
 ## Credits
 - Content
-  - The text for the Home page was taken from Wikipedia Article A
-  - Instructions on how to implement form validation on the Sign Up page was taken from Specific YouTube - Tutorial
-  - The icons in the footer were taken from Font Awesome
-  - The code for social media links was taken from **Love running Project**.
-  - The Form dedign was taken from **Love running Project**.
+  - The page design and Project idea was taken from **Portfolio Project Scope** module in our course.
+  - Some functions idea ware taken from **Love Maths** project
   - The following websites ware used for problem solving.
     - **https://www.diffchecker.com/**.
     - **https://stackoverflow.com/**.
@@ -112,5 +113,5 @@ This game targets adults and children as well foster essential skills such as de
     - **https://tinypng.com/**.
 
 - Media
-  - The photos in Gallery page from open source(Google search).
-  - the background image of the home page is also.
+  - I found the images for the (Rock Paper Scissors) in Google.
+  

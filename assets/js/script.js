@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function (){
         button.addEventListener('click',function (){
             let playerChoice = this.getAttribute('data-choice');
             runGame(playerChoice);
-    })
+    });
 }
 
 
