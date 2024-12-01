@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta tags for search engines -->
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="(Rock Paper Scissors) is a simple random game teachs interacting and prediction">
+    <meta name="keywords" content="Rock Paper Scissors, game, play, prediction probabilities, thinking">
     <!-- Title -->
     <title>Rock Paper Scissors</title>
     <!-- Stylesheet -->
@@ -16,30 +16,30 @@
 <body>
     <!--header-->
     <header>
-        <h2>Rock, Paper, Scissors</h2>
+        <h2>Random Rock, Paper, Scissors</h2>
     </header>
 
     <!--main content-->
     <main>
         <section class="game-area">
             <div>
-                <p>Choose Card:</p>
-                <button aria-label="Rock" choice="0" class="control">Rock</button>
-                <button aria-label="Paper" choice="1"class="control">Paper</button>
-                <button aria-label="Scissors" choice="2" class="control">Scissors</button>
+                <p>Choose To Play:</p>
+                <button aria-label="Rock" data-choice="0" class="control">Rock</button>
+                <button aria-label="Paper" data-choice="1" class="control">Paper</button>
+                <button aria-label="Scissors" data-choice="2" class="control">Scissors</button>
             </div>
             <div id="message"></div>
             <div class="player">
                 <h2 class="score">Your score: <span id="player-score">0</span></h2>
-                <img id="player-image" src="assets/images/resize-three.png" alt="Rock Paper Scissors">
+                <img id="player-image" src="assets/images/resize-three-images.png" alt="Rock Paper Scissors">
             </div>
             <div class="computer">
                 <h2 class="score">Computer score: <span id="computer-score">0</span></h2>
-                <img id="computer-image" src="assets/images/resize-three.png" alt="Rock Paper Scissors">
+                <img id="computer-image" src="assets/images/resize-three-images.png" alt="Rock Paper Scissors">
             </div>
-            
+
         </section>
-        
+
     </main>
     <footer>
         <h2>Rules</h2>

@@ -8,7 +8,6 @@
     box-sizing: border-box;
 }
 html{
-    min-height1:100%;
     position: relative;
 }
 /*General Styles*/
@@ -26,9 +25,6 @@ header{
     text-align: center;
     height: 60px;
     color: black;
-    margin-bottom1: 5px;
-
-    
 }
 header h2{
     margin-top: 10px;
@@ -91,10 +87,7 @@ h1,h2,h3{
 /*footer*/
 footer{
     background-color: rgba(226, 125, 43, 0.973);
-    position1: absolute;
     width: 100%;
-    left1: 0;
-    bottom1: 0;
     min-height: 70px;
     padding-top: 5px;
     text-align: center;

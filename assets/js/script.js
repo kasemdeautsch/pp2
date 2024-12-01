@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function (){
      */
     for (let button of buttons){
         button.addEventListener('click',function (){
-            let playerChoice = this.getAttribute('choice');
+            let playerChoice = this.getAttribute('data-choice');
             runGame(playerChoice);
     })
 }
