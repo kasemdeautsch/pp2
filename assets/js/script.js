@@ -7,7 +7,7 @@ const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 const playerImage = document.getElementById("player-image");
 const computererImage = document.getElementById("computer-image");
-
+let times=0;
 /**
  * wait untill dom loaded succesfully then add listeners on buttons
  */
@@ -16,10 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
     /**
      * loop over the buttons and add the listener on each
      */
+    
     for (let button of buttons) {
+        
         button.addEventListener('click', function () {
             let playerChoice = this.getAttribute('data-choice');
-            runGame(playerChoice);
+            runGame(playerChoice,times);
         });
     }
 
@@ -31,7 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
  * of the custom attribute (choice) applied to the buttons to recognize the type of selection.
  * Inspired from Love maths Project
  */
-function runGame(playerChoice) {
+function runGame(playerChoice,times) {
+    //let times=0;
     const choices = ['rock', 'paper', 'scissors'];
 
     playerImage.src = `assets/images/${choices[playerChoice]}.png`;
@@ -43,6 +46,8 @@ function runGame(playerChoice) {
 
     let result = checkWinner(choices[playerChoice], choices[randIndex]);
     updateScore(result);
+    times++;
+    //console.log(times);
 }
 /**
  * function tekes tow parameters whitch are values of the 'choices' array
@@ -92,15 +97,31 @@ updateScore("none")
 
 function updateScore(winner) {
     try {
-
+        //let times=0;
         let currenPlayertScore = parseInt(playerScore.textContent);
         let currenComputertScore = parseInt(computerScore.textContent);
         if (winner === "player") {
             message.textContent = "You win!";
             playerScore.textContent = ++currenPlayertScore;
+            console.log(playerScore.textContent);
+            if(playerScore.textContent == 6){
+                
+                playerScore.textContent = 0;
+                computerScore.textContent = 0;
+            }
+            //times+=1;
+            //console.log(times);
         } else if (winner === "computer") {
             message.textContent = "Computer wins!";
             computerScore.textContent = ++currenComputertScore;
+            console.log(computerScore.textContent);
+            if(computerScore.textContent == 6){
+                
+                computerScore.textContent = 0;
+                playerScore.textContent = 0;
+            }
+            //times+=1;
+            //console.log(times);
         }
 
     } catch (err) {
