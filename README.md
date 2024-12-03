@@ -37,7 +37,7 @@ This game targets adults and children as well foster essential skills such as de
   + when a player clicks abutton the JavaScript code automaticaly chooses a random option(image) 
     in the computer side of the game board.
   * according to an algorithm the computer determines who is the winner.
-  - The winner is announced to the player under the options buttons and the result Score is updated for 
+  - The winner is announced to the player under the options buttons and the result score is updated for 
     either the player or the computer.
   + The Result and the Score is displayed clearly to the user making it easy to understand
       who has won and the resulted **Score**.

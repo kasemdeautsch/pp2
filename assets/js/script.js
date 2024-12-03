@@ -135,10 +135,12 @@ function finalWinner() {
     //let result="";
     if (parseInt(playerScore.textContent) > parseInt(computerScore.textContent)) {
         //result=`Final winner is You!<br><span>Your Score: ${playerScore.textContent}<br>Computer Score: ${computerScore.textContent}</span>`;
-        message.textContent = "Final winner is You!";
+        message.textContent = `Final winner is You!(${playerScore.textContent} - ${computerScore.textContent})`;
     } else if (parseInt(playerScore.textContent) < parseInt(computerScore.textContent)) {
         //result=`Final winner is Computer!<br><span>Your Score: ${playerScore.textContent}<br>Computer Score: ${computerScore.textContent}</span>`;
-        message.textContent = "Final winner is Computer!";
+        //message.textContent = "Final winner is Computer!";
+        message.textContent = `Final winner is Computer!(${computerScore.textContent} - ${playerScore.textContent})`;
+
     } else {
         message.textContent = "Both scores are equal!";
     }
