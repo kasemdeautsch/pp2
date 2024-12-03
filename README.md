@@ -35,6 +35,9 @@ This game targets adults and children as well foster essential skills such as de
   + The Result and the Score is displayed clearly to the user making it easy to understand
       who has won and the resulted **Score**.
       ![](/assets/images/readme/testing/result.png)
+- New Feature added
+  - After 5 times of playing the final **Winner** is announced and the scores are reseted.
+  ![](/assets/images/readme/testing/final-winner.png)
 - The footer
   - The footer located in the bottom of the page and displays the rules of the game.
   - The footer is available to the useer because it clearly shows the rules to understand
@@ -114,6 +117,7 @@ This game targets adults and children as well foster essential skills such as de
     - **https://www.perplexity.ai/**.
     - **https://www.pexels.com/**.
     - **https://tinypng.com/**.
+    -  **https://balsamiq.com/**.
 
 - Media
   - I found the images for the (Rock Paper Scissors) in Google.
