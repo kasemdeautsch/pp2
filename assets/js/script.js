@@ -101,65 +101,46 @@ function checkWinner(playerOption, computerOption) {
 
 function updateScore(winner) {
     try {
-        //let times=0;
         let currenPlayertScore = parseInt(playerScore.textContent);
         let currenComputertScore = parseInt(computerScore.textContent);
         if (winner === "player") {
             message.textContent = "You win!";
             playerScore.textContent = ++currenPlayertScore;
-            //console.log("playerScore",playerScore.textContent ,typeof playerScore.textContent);
-            
-            /** if(playerScore.textContent == 6){
-                 
-                 playerScore.textContent = 0;
-                 computerScore.textContent = 0;
-             } */
         } else if (winner === "computer") {
             message.textContent = "Computer wins!";
             computerScore.textContent = ++currenComputertScore;
-            //console.log("computerScore",computerScore.textContent ,typeof computerScore.textContent);
-
-            /** if(computerScore.textContent == 6){
-                 
-                 computerScore.textContent = 0;
-                 playerScore.textContent = 0;
-             } */
-
         }
 
     } catch (err) {
-
-        //console.log(err);
         alert(`Anknoun ${winner}! , ${err}!`);
-        //throw `Anknoun ${winner}! Aborting`;
     }
 }
 let times = 1;
 console.log('before check function', times);
 
 function checkCounter() {
-    if (times == 4) {
+    if (times == 5) {
         finalWinner();
         computerScore.textContent = 0;
         playerScore.textContent = 0;
-        
+
         times = 0;
     }
     console.log(times);
     times++;
 }
 
-function finalWinner(){
-    console.log("computerScore finalWinner",computerScore.textContent,typeof computerScore.textContent);
-    console.log("playerScore finalWinner",playerScore.textContent,typeof playerScore.textContent);
-    let result="";
-    if(parseInt(playerScore.textContent) > parseInt(computerScore.textContent)){
-        result=`Final winner is You!<br><span>Your Score: ${playerScore.textContent}<br>Computer Score: ${computerScore.textContent}</span>`;
-        message.innerHTML=result;
-    }else if(parseInt(playerScore.textContent) < parseInt(computerScore.textContent)){
-        result=`Final winner is You!<br><span>Your Score: ${playerScore.textContent}<br>Computer Score: ${computerScore.textContent}</span>`;
-        message.innerHTML=result;
-    }else{
+function finalWinner() {
+    console.log("computerScore finalWinner", computerScore.textContent, typeof computerScore.textContent);
+    console.log("playerScore finalWinner", playerScore.textContent, typeof playerScore.textContent);
+    //let result="";
+    if (parseInt(playerScore.textContent) > parseInt(computerScore.textContent)) {
+        //result=`Final winner is You!<br><span>Your Score: ${playerScore.textContent}<br>Computer Score: ${computerScore.textContent}</span>`;
+        message.textContent = "Final winner is You!";
+    } else if (parseInt(playerScore.textContent) < parseInt(computerScore.textContent)) {
+        //result=`Final winner is Computer!<br><span>Your Score: ${playerScore.textContent}<br>Computer Score: ${computerScore.textContent}</span>`;
+        message.textContent = "Final winner is Computer!";
+    } else {
         message.textContent = "Both scores are equal!";
     }
 }
