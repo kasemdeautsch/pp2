@@ -1,6 +1,6 @@
 
 # Random Rock, Paper, Scissors (game) 
-The Random Rock, Paper, Scissors game is simple  powerful game that as peofriends, colleaques and family play, they can learn to predict outcomes, understand probabilities, and develop the ability to think ahead.
+The Random Rock, Paper, Scissors game is a simple  powerful game that as friends, colleaques and family play, they can learn to predict outcomes, understand probabilities, and develop the ability to think ahead.
 It allows people to choose role and find if they winn according to the role of the game.
 The game has totaly true results because the other cchoice is random.
 
@@ -12,7 +12,7 @@ This game targets adults and children as well foster essential skills such as de
 ## Wireframing
 **Balsamiq**
 - I designed an inatial digital look of the game using the **Balsamiq wireframe desktop tool** so that  
-  the design in actual being simple and does not take timd.
+  the design in actual being simple and does not take time.
 
   ![](/assets/images/readme/testing/wire-framing.png)
 
