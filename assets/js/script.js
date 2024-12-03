@@ -7,7 +7,7 @@ const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 const playerImage = document.getElementById("player-image");
 const computererImage = document.getElementById("computer-image");
-let times=0;
+//let times=1;
 /**
  * wait untill dom loaded succesfully then add listeners on buttons
  */
@@ -16,12 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
     /**
      * loop over the buttons and add the listener on each
      */
-    
     for (let button of buttons) {
-        
+
         button.addEventListener('click', function () {
             let playerChoice = this.getAttribute('data-choice');
-            runGame(playerChoice,times);
+            runGame(playerChoice);
         });
     }
 
@@ -33,7 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
  * of the custom attribute (choice) applied to the buttons to recognize the type of selection.
  * Inspired from Love maths Project
  */
-function runGame(playerChoice,times) {
+//console.log(times);
+
+function runGame(playerChoice) {
     //let times=0;
     const choices = ['rock', 'paper', 'scissors'];
 
@@ -46,9 +47,12 @@ function runGame(playerChoice,times) {
 
     let result = checkWinner(choices[playerChoice], choices[randIndex]);
     updateScore(result);
-    times++;
-    //console.log(times);
+
+
+    checkCounter();
+
 }
+
 /**
  * function tekes tow parameters whitch are values of the 'choices' array
  * and returns the result as string 
@@ -93,7 +97,7 @@ function checkWinner(playerOption, computerOption) {
  * and update the score of both player and computer.
  */
 
-updateScore("none")
+//updateScore("none")
 
 function updateScore(winner) {
     try {
@@ -103,25 +107,24 @@ function updateScore(winner) {
         if (winner === "player") {
             message.textContent = "You win!";
             playerScore.textContent = ++currenPlayertScore;
-            console.log(playerScore.textContent);
-            if(playerScore.textContent == 6){
-                
-                playerScore.textContent = 0;
-                computerScore.textContent = 0;
-            }
-            //times+=1;
-            //console.log(times);
+            //console.log("playerScore",playerScore.textContent ,typeof playerScore.textContent);
+            
+            /** if(playerScore.textContent == 6){
+                 
+                 playerScore.textContent = 0;
+                 computerScore.textContent = 0;
+             } */
         } else if (winner === "computer") {
             message.textContent = "Computer wins!";
             computerScore.textContent = ++currenComputertScore;
-            console.log(computerScore.textContent);
-            if(computerScore.textContent == 6){
-                
-                computerScore.textContent = 0;
-                playerScore.textContent = 0;
-            }
-            //times+=1;
-            //console.log(times);
+            //console.log("computerScore",computerScore.textContent ,typeof computerScore.textContent);
+
+            /** if(computerScore.textContent == 6){
+                 
+                 computerScore.textContent = 0;
+                 playerScore.textContent = 0;
+             } */
+
         }
 
     } catch (err) {
@@ -129,5 +132,34 @@ function updateScore(winner) {
         //console.log(err);
         alert(`Anknoun ${winner}! , ${err}!`);
         //throw `Anknoun ${winner}! Aborting`;
+    }
+}
+let times = 1;
+console.log('before check function', times);
+
+function checkCounter() {
+    if (times == 4) {
+        finalWinner();
+        computerScore.textContent = 0;
+        playerScore.textContent = 0;
+        
+        times = 0;
+    }
+    console.log(times);
+    times++;
+}
+
+function finalWinner(){
+    console.log("computerScore finalWinner",computerScore.textContent,typeof computerScore.textContent);
+    console.log("playerScore finalWinner",playerScore.textContent,typeof playerScore.textContent);
+    let result="";
+    if(parseInt(playerScore.textContent) > parseInt(computerScore.textContent)){
+        result=`Final winner is You!<br><span>Your Score: ${playerScore.textContent}<br>Computer Score: ${computerScore.textContent}</span>`;
+        message.innerHTML=result;
+    }else if(parseInt(playerScore.textContent) < parseInt(computerScore.textContent)){
+        result=`Final winner is You!<br><span>Your Score: ${playerScore.textContent}<br>Computer Score: ${computerScore.textContent}</span>`;
+        message.innerHTML=result;
+    }else{
+        message.textContent = "Both scores are equal!";
     }
 }
