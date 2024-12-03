@@ -47,7 +47,7 @@ This game targets adults and children as well foster essential skills such as de
   ![](/assets/images/readme/testing/final-winner.png)
 - The footer
   - The footer located in the bottom of the page and displays the rules of the game.
-  - The footer is available to the useer because it clearly shows the rules to understand
+  - The footer is available to the user because it clearly shows the rules to understand
      how the game is played.
      ![](/assets/images/readme/testing/footer.png)
 
