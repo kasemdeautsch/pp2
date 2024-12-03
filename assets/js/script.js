@@ -123,7 +123,6 @@ function checkCounter() {
         finalWinner();
         computerScore.textContent = 0;
         playerScore.textContent = 0;
-
         times = 0;
     }
     console.log(times);

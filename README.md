@@ -61,7 +61,7 @@ This game targets adults and children as well foster essential skills such as de
 
 
      ![](/assets/images/readme/testing/testing.png)
-     ![](/assets/images/readme/testing/testing2.png)
+     
      
 
 **Bugs**
@@ -92,7 +92,10 @@ This game targets adults and children as well foster essential skills such as de
       ![](/assets/images/readme/testing/css-validator.png)
   - Accesibility
     - Colors and fonts are accesible and readable using lighthouse in devtools.
-      ![](/media/accessibility.png)
+      ![](/assets/images/readme/testing/testing.png)
+ - JavaScript
+   - I tested the code and found only one warning about for loop.
+    ![](/assets/images/readme/testing/Js.png)
 ## Deployment
 
   - The site was deployed to GitHub pages. The steps to deploy are as follows:
