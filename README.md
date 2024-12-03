@@ -9,6 +9,13 @@ This game targets adults and children as well foster essential skills such as de
  
 ![](/assets/images/readme/testing/responsive.png)
 
+## Wireframing
+**Balsamiq**
+- I designed an inatial digital look of the game using the **Balsamiq wireframe desktop tool** so that  
+  the design in actual being simple and does not take timd.
+
+  ![](/assets/images/readme/testing/wire-framing.png)
+
 ## Features
 
 **Existing Features**
