@@ -97,17 +97,17 @@ function checkWinner(playerOption, computerOption) {
  * and update the score of both player and computer.
  */
 
-//updateScore("none")
+updateScore("none")
 
 function updateScore(winner) {
     try {
         let currenPlayertScore = parseInt(playerScore.textContent);
         let currenComputertScore = parseInt(computerScore.textContent);
         if (winner === "player") {
-            message.textContent = "You win!";
+            message.textConten = "You win!";
             playerScore.textContent = ++currenPlayertScore;
         } else if (winner === "computer") {
-            message.textContent = "Computer wins!";
+            message.textConten = "Computer wins!";
             computerScore.textContent = ++currenComputertScore;
         }
 
