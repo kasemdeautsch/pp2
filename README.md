@@ -75,7 +75,12 @@ This game targets adults and children as well foster essential skills such as de
      
 
 **Bugs**
-  - no bugs found.
+  - When I deployed my project to github, I noticed that the  links to (css, js) were broken, \
+    the reason was that i used the absolute file path:\
+    <link rel="stylesheet" href="/assets/css/style.css">/
+  - To fix that remove the / from the starting.
+
+
   - I used the **relative** file path instead of the **absolute** one according to github so no
      broken links found when deployed to github.
 
@@ -109,10 +114,15 @@ This game targets adults and children as well foster essential skills such as de
 ## Deployment
 
   - The site was deployed to GitHub pages. The steps to deploy are as follows:
-    - In the GitHub repository, navigate to the Settings tab
-    - From the source section drop-down menu, select the Master Branch
-    - Once the master branch has been selected, the page provides the link to the deployed project.
+    - In the GitHub repository, navigate to the Settings tab.
+    - Navigate to **Pages** tab in the left menue.
+    - From the source section drop-down menu choose **Deploy from branch**.
+    - Select the relevent branch (*main* in my case).
+    - Make sure the /(root) directory is selected and klick **Save**.
+    - Once the branch has been selected, the page provides the link to the deployed project.
     - The live link can be found [here](https://github.com/kasemdeautsch/pp2).
+    - in the repository on the right menue under **Deplpyments** click on** github-pages**.
+
 ## Credits
 - Content
   - The page design and Project idea was taken from **Portfolio Project Scope** module in our course.
