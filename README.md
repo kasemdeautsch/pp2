@@ -14,7 +14,10 @@ This game targets adults and children as well foster essential skills such as de
 - I designed an inatial digital look of the game using the **Balsamiq wireframe desktop tool** so that  
   the design in actual being simple and does not take time.
 
-  ![](/assets/images/readme/testing/wire-framing.png)
+  ![](/assets/images/readme/testing/wireframing.png)
+  
+  ![](/assets/images/readme/testing/wireframing-mobile.png)
+
 
 ## Features
 
@@ -77,12 +80,8 @@ This game targets adults and children as well foster essential skills such as de
 **Bugs**
   - When I deployed my project to github, I noticed that the  links to (css, js) were broken, \
     the reason was that i used the absolute file path:\
-    <link rel="stylesheet" href="/assets/css/style.css">/
-  - To fix that remove the / from the starting.
-
-
-  - I used the **relative** file path instead of the **absolute** one according to github so no
-     broken links found when deployed to github.
+    `<link rel="stylesheet" href="/assets/css/style.css">`
+  - To fix that I removed the / from the starting.
 
 
 **Unfixed Bugs**
