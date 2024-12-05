@@ -92,6 +92,8 @@ This game targets adults and children as well foster essential skills such as de
   - HTML
     - I tested the website and no errors were returned when passing through the official W3C validator
     ![](/assets/images/readme/testing/html-validator.png)
+    - Also 404.html page tested and no errors found.
+    ![](/assets/images/readme/testing/errorpage.png)
     
   - CSS 
     <p>
