@@ -1,110 +1,134 @@
  /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/*Asterisk wildcard selector*/
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-html{
-    position: relative;
-}
-/*General Styles*/
-body{
-    min-height: 100vh;
-    background-color: rgb(232, 245, 174);
-    font-family: Roboto, sans-serif;
-    display: flex;
-    flex-direction: column;
-    color:#3a3a3a;
-}
-/*header*/
-header{
-    background-color: rgba(226, 125, 43, 0.973);
-    text-align: center;
-    height: 60px;
-    color: black;
-}
-header h2{
-    margin-top: 10px;
-}
-.player h2, .computer h2{
-    font-size: 1rem;
-}
-.game-area p{
-    margin-bottom: 5px;
-    font-weight: bold;
-}
+ /*Asterisk wildcard selector*/
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
 
-/*main */
-main{
-    /*make main take athe srplus space to push footer down*/
-    flex: 1 0 auto;
-}
-h1,h2,h3{
-    font-family: Oswald, sans-serif;
-}
-/*game area*/
-.game-area{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%;
-    text-align: center;
-}
-.control{
-    display: inline-block;
-    width: 70px;
-    height: 40px;
-    margin: 2px;
-}
-#message{
-    height: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-top: 5px;
-}
-.player{
-    background-color: lightblue;
-    float: left;
-    width: 45%;
-}
-#player-image{
-    width: 75%;
-}
-.computer{
-    background-color: #f2040433;
-    float: right;
-    width: 45%;
-}
-#computer-image{
-    width: 75%;
-}
-.score{
-    margin-bottom: 5px;
-}
-/*footer*/
-footer{
-    background-color: rgba(226, 125, 43, 0.973);
-    width: 100%;
-    min-height: 70px;
-    padding-top: 5px;
-    text-align: center;
-    color: black;
-}
-footer p{
-    font-size: .6rem;
-    font-weight: bold;
-    
-}
-/*Media quiry: tablet and larger(768px and up)*/
-@media screen and (min-width:768px){
-    .player h2, .computer h2 {
-        font-size: 1.5rem;
-    }
-    footer p{
-        font-size: 1rem;
-        font-weight: normal;
-    }
-}
+ html {
+     position: relative;
+ }
+
+ /*General Styles*/
+ body {
+     min-height: 100vh;
+     background-color: rgb(232, 245, 174);
+     font-family: Roboto, sans-serif;
+     display: flex;
+     flex-direction: column;
+     color: #3a3a3a;
+ }
+
+ /*header*/
+ header {
+     background-color: rgba(226, 125, 43, 0.973);
+     text-align: center;
+     height: 60px;
+     color: black;
+ }
+
+ header h2 {
+     margin-top: 10px;
+ }
+
+ .player h2,
+ .computer h2 {
+     font-size: 1rem;
+ }
+
+ .game-area p {
+     margin-bottom: 5px;
+     font-weight: bold;
+ }
+
+ /*main */
+ main {
+     /*make main take athe srplus space to push footer down*/
+     flex: 1 0 auto;
+ }
+
+ h1,
+ h2,
+ h3 {
+     font-family: Oswald, sans-serif;
+ }
+
+ /*game area*/
+ .game-area {
+     width: 90%;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 2%;
+     text-align: center;
+ }
+
+ .control {
+     display: inline-block;
+     width: 70px;
+     height: 40px;
+     margin: 2px;
+ }
+
+ #message {
+     height: 20px;
+     font-weight: bold;
+     letter-spacing: 1px;
+     margin-top: 5px;
+ }
+
+ .player {
+     background-color: lightblue;
+     float: left;
+     width: 45%;
+ }
+
+ #player-image {
+     width: 75%;
+ }
+
+ .computer {
+     background-color: #f2040433;
+     float: right;
+     width: 45%;
+ }
+
+ #computer-image {
+     width: 75%;
+ }
+
+ .score {
+     margin-bottom: 5px;
+ }
+
+ /*footer*/
+ footer {
+     background-color: rgba(226, 125, 43, 0.973);
+     width: 100%;
+     min-height: 70px;
+     padding-top: 5px;
+     text-align: center;
+     color: black;
+ }
+
+ footer p {
+     font-size: .6rem;
+     font-weight: bold;
+
+ }
+
+ /*Media quiry: tablet and larger(768px and up)*/
+ @media screen and (min-width:768px) {
+
+     .player h2,
+     .computer h2 {
+         font-size: 1.5rem;
+     }
+
+     footer p {
+         font-size: 1rem;
+         font-weight: normal;
+     }
+ }
