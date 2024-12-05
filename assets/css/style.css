@@ -139,10 +139,15 @@
      background-clip: text;
  }
 
+ .container span {
+     font-size: large;
+ }
+
  .container p {
      margin-top: 20px;
      font-size: 2vw;
      letter-spacing: 5px;
+     text-align: center;
  }
 
  /*Media quiry: tablet and larger(768px and up)*/
