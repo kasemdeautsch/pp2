@@ -139,14 +139,15 @@
      background-clip: text;
  }
 
- .container span {
+ .container h3 {
      font-size: large;
+     letter-spacing: 5px;
  }
 
  .container p {
      margin-top: 20px;
      font-size: 2vw;
-     letter-spacing: 5px;
+     letter-spacing: 2px;
      text-align: center;
  }
 
