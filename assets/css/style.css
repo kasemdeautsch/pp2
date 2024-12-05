@@ -119,6 +119,32 @@
 
  }
 
+ .container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     width: 100%;
+     flex-direction: column;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+ .container h2 {
+     font-size: 15vw;
+     font-weight: 700 !important;
+     background: url("../images/galaxy.jpg");
+     background-size: cover;
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+     background-clip: text;
+ }
+
+ .container p {
+     margin-top: 20px;
+     font-size: 2vw;
+     letter-spacing: 5px;
+ }
+
  /*Media quiry: tablet and larger(768px and up)*/
  @media screen and (min-width:768px) {
 
