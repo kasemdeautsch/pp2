@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * Inspired from Love maths Project
  */
 function runGame(playerChoice) {
-    const choices = ['rock', 'paper', 'scissors'];
+    const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
     playerImage.src = `assets/images/${choices[playerChoice]}.png`;
     playerImage.alt = choices[playerChoice];
     let randIndex = Math.floor(Math.random() * choices.length);
