@@ -87,6 +87,7 @@
 
  #player-image {
      width: 75%;
+     height: auto;
  }
 
  .computer {
@@ -97,6 +98,7 @@
 
  #computer-image {
      width: 75%;
+     height: auto;
  }
 
  .score {
