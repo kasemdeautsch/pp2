@@ -35,9 +35,10 @@ function runGame(playerChoice) {
     computererImage.src = `assets/images/${choices[randIndex]}.png`;
     computererImage.alt = choices[randIndex];
     console.log('done');
-    let result = checkWinner(choices[playerChoice], choices[randIndex]);
-    updateScore(result);
-    //checkCounter();
+    checkWinner(choices[playerChoice], choices[randIndex]);
+    //let result = checkWinner(choices[playerChoice], choices[randIndex]);
+    //updateScore(result);
+    //checkScores(result);
 }
 /**
  * function tekes tow parameters whitch are values of the 'choices' array
@@ -45,82 +46,72 @@ function runGame(playerChoice) {
  * to determine the winner(player/computer)
  */
 function checkWinner(playerOption, computerOption) {
-    //while (true){
-        
-        try {
-            let winner = "";
-            
-            if (playerOption === "rock") {
-                if (computerOption === "scissors" || computerOption === "lizard") {
-                    winner = "player";
-                } else if(computerOption === "rock") {
-                    winner = "None";
-                }else {
-                    winner = "computer";
-                }
-
-            console.log('playerOption', playerOption);
-            console.log('computerOption', computerOption);
-            console.log('winner', winner);
-            return winner;
-                
-            } else if (playerOption === "paper") {
-                if (computerOption === "rock" || computerOption === "spock") {
-                    winner = "player";
-                } else if (computerOption === "paper"){
-                    winner = "None";
-                }else {
-                    winner = "computer";
-                }
-            console.log('playerOption', playerOption);
-            console.log('computerOption', computerOption);
-            console.log('winner', winner);
-            return winner;
-
-            } else if (playerOption === "scissors") {
-                if (computerOption === "paper" || computerOption === "lizard") {
-                    winner = "player";
-                } else if (computerOption === "scissors"){
-                    winner = "None";
-                }else {
-                    winner = "computer";
-                }
-            console.log('playerOption', playerOption);
-            console.log('computerOption', computerOption);
-            console.log('winner', winner);
-            return winner;
-
-            } else if (playerOption === "lizard") {
-                if (computerOption === "paper" || computerOption === "spock") {
-                    winner = "player";
-                } else if (computerOption === "lizard"){
-                    winner = "None";
-                }else {
-                    winner = "computer";
-                }
-            console.log('playerOption', playerOption);
-            console.log('computerOption', computerOption);
-            console.log('winner', winner);
-            return winner;
-            
-            } else if (playerOption === "spock") {
-                if (computerOption === "rock" || computerOption === "scissors") {
-                    winner = "player";
-                } else if (computerOption === "spock"){
-                    winner = "None";
-                }else {
-                    winner = "computer";
-                }
-            console.log('playerOption', playerOption);
-            console.log('computerOption', computerOption);
-            console.log('winner', winner);
-            return winner;
-            
+    try {
+        let winner = "";
+        if (playerOption === "rock") {
+            if (computerOption === "scissors" || computerOption === "lizard") {
+                winner = "player";
+            } else if(computerOption === "rock") {
+                winner = "None";
+            }else {
+                winner = "computer";
             }
-        } catch (err) {
-            alert(`Unknoun ${playerOption}! , ${err}!`);
+        } else if (playerOption === "paper") {
+            if (computerOption === "rock" || computerOption === "spock") {
+                winner = "player";
+            } else if (computerOption === "paper"){
+                winner = "None";
+            }else {
+                winner = "computer";
+            }
+        } else if (playerOption === "scissors") {
+            if (computerOption === "paper" || computerOption === "lizard") {
+                winner = "player";
+            } else if (computerOption === "scissors"){
+                winner = "None";
+            }else {
+                winner = "computer";
+            }
+        } else if (playerOption === "lizard") {
+            if (computerOption === "paper" || computerOption === "spock") {
+                winner = "player";
+            } else if (computerOption === "lizard"){
+                winner = "None";
+            }else {
+                winner = "computer";
+            }
+        } else if (playerOption === "spock") {
+            if (computerOption === "rock" || computerOption === "scissors") {
+                winner = "player";
+            } else if (computerOption === "spock"){
+                winner = "None";
+            }else {
+                winner = "computer";
+            }
         }
+        console.log('playerOption', playerOption);
+        console.log('computerOption', computerOption);
+        console.log('winner', winner);
+        announce(winner);
+        //checkScores(result)
+        updateScore(winner);
+        //return winner;
+    } catch (err) {
+        alert(`Unknoun ${playerOption}! , ${err}!`);
     }
+    }
+
+function announce(winner) {
+    if (winner === "player") {
+        alert("Yow earn 1 point");
+        //finalWinner(currenPlayertScore, currenComputertScore)
+        //playerScore.textContent = ++currenPlayertScore;
+    } else if (winner === "computer") {
+        alert("Computer earn 1 point");        
+    } else if (winner === "None"){
+        alert("It's a Tie!");
+    }
+}
     
 //}
 /**
@@ -128,26 +119,53 @@ function checkWinner(playerOption, computerOption) {
  * and update the score of both player and computer.
  */
 
+
+
 function updateScore(winner) {
     try {
         //console.clear();
         let currenPlayertScore = parseInt(playerScore.textContent);
         let currenComputertScore = parseInt(computerScore.textContent);
+        
         if (winner === "player") {
-            //message.textContent = "You win!";
-            
             playerScore.textContent = ++currenPlayertScore;
-            alert("Yow earn 1 point");
         } else if (winner === "computer") {
-            //message.textConten = "Computer wins!";
-            
             computerScore.textContent = ++currenComputertScore;
-            alert("Computer earn 1 point");
-        } else {
+        } 
+        checkScores();
+        /*
+        else {
             alert("It's a Draw!");
-        }
+        }*/
     } catch (err) {
         alert(`Anknoun ${winner}! , ${err}!`);
+    }
+}
+
+function checkScores(result){
+
+    let currenPlayertScore = parseInt(playerScore.textContent);
+    let currenComputertScore = parseInt(computerScore.textContent);
+    try {
+        if (currenPlayertScore == 5 && currenComputertScore == 5){
+            message.textContent = "No one wins!";
+            playerScore.textContent = 0;
+            computerScore.textContent = 0;
+        } 
+        else if (currenPlayertScore == 5){
+            message.textContent = "Winner is You";
+            playerScore.textContent = 0;
+            computerScore.textContent = 0;
+        }
+        else if (currenComputertScore == 5){
+            message.textContent = "Winner is Computer";
+            playerScore.textContent = 0;
+            computerScore.textContent = 0;
+        }/* else {
+            updateScore(result);
+        }*/
+    } catch(er) {
+        alert(`Unknown ${er}!`)
     }
 }
 /*
@@ -161,14 +179,32 @@ function checkCounter() {
     }
     times++;
 }
-function finalWinner() {
-    if (parseInt(playerScore.textContent) > parseInt(computerScore.textContent)) {
-        message.textContent = `Final winner is You!(${playerScore.textContent} - ${computerScore.textContent})`;
-    } else if (parseInt(playerScore.textContent) < parseInt(computerScore.textContent)) {
-        message.textContent = `Final winner is Computer!(${computerScore.textContent} - ${playerScore.textContent})`;
-    } else {
-        message.textContent = "Both scores are equal!";
-    }
-}
 
 */
+
+/*
+function finalWinner(currenPlayertScore, currenComputertScore) {
+
+    //message.textContent = "Both scores are equal!";
+    //console.log("currenPlayertScore: ", currenPlayertScore, "currenComputertScore: ", currenComputertScore);
+    try {
+        if (currenPlayertScore == 5){
+            message.textContent = "Winner is Player";
+        } else if (currenComputertScore == 5){
+            message.textContent = "Winner is Computer";
+        }
+        else if (currenPlayertScore == currenComputertScore == 5){
+            message.textContent = "No one wins!";
+        }
+    } catch(er) {
+        alert(`Unknown ${er}!`)
+    }
+    
+
+}
+    
+    */
+        
+    
+
+
