@@ -31,11 +31,13 @@ function runGame(playerChoice) {
     playerImage.src = `assets/images/${choices[playerChoice]}.png`;
     playerImage.alt = choices[playerChoice];
     let randIndex = Math.floor(Math.random() * choices.length);
+    //console.log("randIndex:", randIndex)
     computererImage.src = `assets/images/${choices[randIndex]}.png`;
     computererImage.alt = choices[randIndex];
+    console.log('done');
     let result = checkWinner(choices[playerChoice], choices[randIndex]);
     updateScore(result);
-    checkCounter();
+    //checkCounter();
 }
 /**
  * function tekes tow parameters whitch are values of the 'choices' array
@@ -43,37 +45,84 @@ function runGame(playerChoice) {
  * to determine the winner(player/computer)
  */
 function checkWinner(playerOption, computerOption) {
-    try {
-        let winner = "";
-        if (playerOption === "scissors") {
-            if (computerOption === "paper") {
-                winner = "player";
-                return winner;
-            } else {
-                winner = "computer";
-                return winner;
+    //while (true){
+        
+        try {
+            let winner = "";
+            
+            if (playerOption === "rock") {
+                if (computerOption === "scissors" || computerOption === "lizard") {
+                    winner = "player";
+                } else if(computerOption === "rock") {
+                    winner = "None";
+                }else {
+                    winner = "computer";
+                }
+
+            console.log('playerOption', playerOption);
+            console.log('computerOption', computerOption);
+            console.log('winner', winner);
+            return winner;
+                
+            } else if (playerOption === "paper") {
+                if (computerOption === "rock" || computerOption === "spock") {
+                    winner = "player";
+                } else if (computerOption === "paper"){
+                    winner = "None";
+                }else {
+                    winner = "computer";
+                }
+            console.log('playerOption', playerOption);
+            console.log('computerOption', computerOption);
+            console.log('winner', winner);
+            return winner;
+
+            } else if (playerOption === "scissors") {
+                if (computerOption === "paper" || computerOption === "lizard") {
+                    winner = "player";
+                } else if (computerOption === "scissors"){
+                    winner = "None";
+                }else {
+                    winner = "computer";
+                }
+            console.log('playerOption', playerOption);
+            console.log('computerOption', computerOption);
+            console.log('winner', winner);
+            return winner;
+
+            } else if (playerOption === "lizard") {
+                if (computerOption === "paper" || computerOption === "spock") {
+                    winner = "player";
+                } else if (computerOption === "lizard"){
+                    winner = "None";
+                }else {
+                    winner = "computer";
+                }
+            console.log('playerOption', playerOption);
+            console.log('computerOption', computerOption);
+            console.log('winner', winner);
+            return winner;
+            
+            } else if (playerOption === "spock") {
+                if (computerOption === "rock" || computerOption === "scissors") {
+                    winner = "player";
+                } else if (computerOption === "spock"){
+                    winner = "None";
+                }else {
+                    winner = "computer";
+                }
+            console.log('playerOption', playerOption);
+            console.log('computerOption', computerOption);
+            console.log('winner', winner);
+            return winner;
+            
             }
-        } else if (playerOption === "paper") {
-            if (computerOption === "rock") {
-                winner = "player";
-                return winner;
-            } else {
-                winner = "computer";
-                return winner;
-            }
-        } else if (playerOption === "rock") {
-            if (computerOption === "scissors") {
-                winner = "player";
-                return winner;
-            } else {
-                winner = "computer";
-                return winner;
-            }
+        } catch (err) {
+            alert(`Unknoun ${playerOption}! , ${err}!`);
         }
-    } catch (err) {
-        alert(`Anknoun ${playerOption}! , ${err}!`);
     }
-}
+    
+//}
 /**
  * function receives the winner to display the message in message div
  * and update the score of both player and computer.
@@ -81,22 +130,30 @@ function checkWinner(playerOption, computerOption) {
 
 function updateScore(winner) {
     try {
+        //console.clear();
         let currenPlayertScore = parseInt(playerScore.textContent);
         let currenComputertScore = parseInt(computerScore.textContent);
         if (winner === "player") {
-            message.textContent = "You win!";
+            //message.textContent = "You win!";
+            
             playerScore.textContent = ++currenPlayertScore;
+            alert("Yow earn 1 point");
         } else if (winner === "computer") {
-            message.textConten = "Computer wins!";
+            //message.textConten = "Computer wins!";
+            
             computerScore.textContent = ++currenComputertScore;
+            alert("Computer earn 1 point");
+        } else {
+            alert("It's a Draw!");
         }
     } catch (err) {
         alert(`Anknoun ${winner}! , ${err}!`);
     }
 }
+/*
 let times = 1;
 function checkCounter() {
-    if (times == 5) {
+    if (times == 15) {
         finalWinner();
         computerScore.textContent = 0;
         playerScore.textContent = 0;
@@ -113,3 +170,5 @@ function finalWinner() {
         message.textContent = "Both scores are equal!";
     }
 }
+
+*/
