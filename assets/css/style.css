@@ -65,11 +65,16 @@
      text-align: center;
  }
 
- .control {
+ .control,
+ .reset-game {
      display: inline-block;
-     width: 70px;
+     min-width: 70px;
      height: 40px;
      margin: 2px;
+ }
+
+ .customized-reset{
+    background-color:#97efe5;
  }
 
  #message {

@@ -8,19 +8,23 @@ const computerScore = document.getElementById("computer-score");
 const playerImage = document.getElementById("player-image");
 const computererImage = document.getElementById("computer-image");
 const gameModal = new bootstrap.Modal(document.getElementById("gameModal"));
-const resetOrContinue = document.getElementById("resetGame");
-console.log(resetOrContinue);
-gameModal.show();
+const resetButtons = document.getElementsByClassName("reset-game");
+console.log(resetButtons);
+//gameModal.show();
 
 /**
  * wait untill dom loaded succesfully then add listeners on buttons
  */
 document.addEventListener("DOMContentLoaded", function () {
 
-    resetOrContinue.addEventListener('click', function(){
-        playerScore.textContent = 0;
-        computerScore.textContent = 0;
-    })
+    for (let button of resetButtons) {
+        button.addEventListener('click', function() {
+            playerScore.textContent = 0;
+            computerScore.textContent = 0;
+            console.log('okk')
+        })
+    }
+    
 
     /**
      * loop over the buttons and add the listener on each

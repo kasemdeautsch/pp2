@@ -69,6 +69,7 @@
                 <button aria-label="Scissors" data-choice="2" class="control">Scissors</button>
                 <button aria-label="Lizard" data-choice="3" class="control">Lizard</button>
                 <button aria-label="Spoke" data-choice="4" class="control">Spoke</button>
+                <button aria-label="reset game" class="reset-game customized-reset ms-5">Reset Game.</button>
             </div>
             <div id="message"></div>
             <div class="player">
@@ -80,6 +81,14 @@
                 <img id="computer-image" src="assets/images/rpsls.webp" alt="Rock Paper Scissors">
             </div>
         </section>
+        <section class="container2">
+            <div class="row2">
+                <div class="col-122">
+                    
+                </div>
+            </div>
+        </section>
+        
     </main>
     <footer>
         <h2>Rules</h2>
@@ -89,10 +98,7 @@
 
     
     
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary gameOptions" data-bs-toggle="modal" data-bs-target="#gameModal">
-        Launch static backdrop modal
-    </button>
+    
     
     <!-- Bootstrap modal -->
     <div class="modal fade" id="gameModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
@@ -106,8 +112,8 @@
                 Do you want to reset the game
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="resetGame" data-bs-dismiss="modal">Reset game</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue</button>
+            <button type="button" class="btn btn-primary reset-game" id="resetGame" data-bs-dismiss="modal">Reset game</button>
             </div>
         </div>
         </div>
