@@ -1,21 +1,33 @@
 /**
  * constants for dom elements and possible choices added in an array
  */
-const buttons = document.getElementsByTagName("button");
+const options = document.getElementsByClassName("control");
 const message = document.getElementById("message");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 const playerImage = document.getElementById("player-image");
 const computererImage = document.getElementById("computer-image");
+const gameModal = new bootstrap.Modal(document.getElementById("gameModal"));
+const resetOrContinue = document.getElementById("resetGame");
+console.log(resetOrContinue);
+gameModal.show();
+
 /**
  * wait untill dom loaded succesfully then add listeners on buttons
  */
 document.addEventListener("DOMContentLoaded", function () {
+
+    resetOrContinue.addEventListener('click', function(){
+        playerScore.textContent = 0;
+        computerScore.textContent = 0;
+    })
+
     /**
      * loop over the buttons and add the listener on each
      */
-    for (let button of buttons) {
-        button.addEventListener('click', function () {
+    
+    for (let option of options) {
+        option.addEventListener('click', function () {
             let playerChoice = this.getAttribute('data-choice');
             runGame(playerChoice);
         });
@@ -31,7 +43,7 @@ function runGame(playerChoice) {
     playerImage.src = `assets/images/${choices[playerChoice]}.png`;
     playerImage.alt = choices[playerChoice];
     let randIndex = Math.floor(Math.random() * choices.length);
-    //console.log("randIndex:", randIndex)
+   
     computererImage.src = `assets/images/${choices[randIndex]}.png`;
     computererImage.alt = choices[randIndex];
     console.log('done');
@@ -123,7 +135,6 @@ function announce(winner) {
 
 function updateScore(winner) {
     try {
-        //console.clear();
         let currenPlayertScore = parseInt(playerScore.textContent);
         let currenComputertScore = parseInt(computerScore.textContent);
         
@@ -149,18 +160,15 @@ function checkScores(result){
     try {
         if (currenPlayertScore == 5 && currenComputertScore == 5){
             message.textContent = "No one wins!";
-            playerScore.textContent = 0;
-            computerScore.textContent = 0;
+            gameModal.show()
         } 
         else if (currenPlayertScore == 5){
             message.textContent = "Winner is You";
-            playerScore.textContent = 0;
-            computerScore.textContent = 0;
+            gameModal.show();
         }
         else if (currenComputertScore == 5){
             message.textContent = "Winner is Computer";
-            playerScore.textContent = 0;
-            computerScore.textContent = 0;
+            gameModal.show();
         }/* else {
             updateScore(result);
         }*/
