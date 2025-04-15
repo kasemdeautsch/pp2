@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener('click', function() {
             playerScore.textContent = 0;
             computerScore.textContent = 0;
+            message.textContent = "";
             console.log('okk')
         })
     }
