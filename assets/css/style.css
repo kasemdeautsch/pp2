@@ -103,7 +103,6 @@
 
  .player {
      background-color: lightblue;
-     float: left;
      width: 45%;
  }
 
@@ -114,7 +113,6 @@
 
  .computer {
      background-color: #f2040433;
-     float: right;
      width: 45%;
  }
 
