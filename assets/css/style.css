@@ -109,6 +109,7 @@
  #player-image {
      width: 75%;
      height: auto;
+     margin-bottom: 10px;
  }
 
  .computer {
@@ -119,6 +120,7 @@
  #computer-image {
      width: 75%;
      height: auto;
+     margin-bottom: 10px;
  }
 
  .score {
