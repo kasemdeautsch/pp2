@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <!-- Meta tags for search engines -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta tags for search engines -->
-    <meta name="description" content="(Rock Paper Scissors) is a simple random game teachs interacting and prediction">
-    <meta name="keywords" content="Rock Paper Scissors, game, play, prediction probabilities, thinking">
+    <meta name="description" content="(Rock Paper Scissors Lizard Spock Game) is a simple random game teachs interacting and prediction">
+    <meta name="keywords" content="Rock Paper Scissors, game, simple play, prediction, probabilities, thinking">
     <!-- Title -->
     <title>Rock Paper Scissors Lizard Spock</title>
     <!-- Bootstrap CSS Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-
     <!-- Custom CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Fav icons  -->
-
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon-72x72.png">
@@ -33,9 +31,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
 </head>
-
 <body>
     <!--header-->
     <header>
@@ -43,19 +39,20 @@
     </header>
     <!--main content-->
     <main>
-        <!--The design of the page is from Code intitute -->
+        <!--The design of the inspired from Code intitute (then improved) -->
+        <!-- game section -->
         <section class="game-area">
             <div>
+                <!-- The data-choice attribute here on each button has the same order on choices list in script.js file -->
                 <p>Choose To Play (Winner, first of 5 points):</p>
                 <button aria-label="Rock" data-choice="0" class="control">Rock</button>
                 <button aria-label="Paper" data-choice="1" class="control">Paper</button>
                 <button aria-label="Scissors" data-choice="2" class="control">Scissors</button>
                 <button aria-label="Lizard" data-choice="3" class="control">Lizard</button>
                 <button aria-label="Spoke" data-choice="4" class="control">Spoke</button>
-                
             </div>
             <div id="message" class="my-2"></div>
-            <div class="move my-2">
+            <div class="players my-2">
                 <div class="player">
                     <h2 class="score">Your score: <span id="player-score">0</span></h2>
                     <img id="player-image" src="assets/images/rpsls.webp" alt="Rock Paper Scissors">
@@ -65,8 +62,8 @@
                     <img id="computer-image" src="assets/images/rpsls.webp" alt="Rock Paper Scissors">
                 </div>
             </div>
-            
         </section>
+        <!-- Reset and info section -->
         <section class="mb-2">
             <div class="gr-buttons">
                 <button aria-label="reset game" class="reset-game customized-reset mt-1">Reset Game</button>
@@ -79,7 +76,7 @@
         </section>
         
     </main>
-    
+    <!-- footer -->
     <footer>
         <h2>Rules</h2>
         <p>Rock crushes Scissors and Lizard - Paper covers Rock and disproves Spock - Scissors cuts Paper and decapitates Lizard - Lizard eats Paper and poisons Spock - Spock vaporizes Rock and smashes Scissors</p>

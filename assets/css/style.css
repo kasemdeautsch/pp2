@@ -87,7 +87,7 @@
      font-size: 90%;
     background-color:#97efe5;
  }
-.move {
+.players {
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
@@ -131,11 +131,6 @@
     margin-right: auto;
     margin-left: auto;
  }
- .rules {
-    text-decoration1: none;
-    
- }
-
  /*footer*/
  footer {
      background-color: rgba(226, 125, 43, 0.973);
@@ -184,7 +179,7 @@
      text-align: center;
  }
 
- /*Media quiry: tablet and larger(768px and up)*/
+ /* Media query: tablet and larger(768px and up) */
  @media screen and (min-width:768px) {
 
      .player h2,
@@ -197,9 +192,9 @@
          font-weight: normal;
      }
  }
-
+/* Media query: display the game one on top on small screens */
  @media screen and (max-width:768px) {
-    .move {
+    .players {
         flex-direction: column;
         align-items: center;
     }

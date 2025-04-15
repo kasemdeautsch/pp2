@@ -9,28 +9,21 @@ const playerImage = document.getElementById("player-image");
 const computererImage = document.getElementById("computer-image");
 const gameModal = new bootstrap.Modal(document.getElementById("gameModal"));
 const resetButtons = document.getElementsByClassName("reset-game");
-//console.log(resetButtons);
-//gameModal.show();
-
-/**
+/*
  * wait untill dom loaded succesfully then add listeners on buttons
  */
 document.addEventListener("DOMContentLoaded", function () {
-
+    /* add event listener on reset and modal close button to reset the scores */
     for (let button of resetButtons) {
         button.addEventListener('click', function() {
             playerScore.textContent = 0;
             computerScore.textContent = 0;
-            //message.textContent = "";
-            console.log('okk')
         })
     }
-    
 
-    /**
-     * loop over the buttons and add the listener on each
+    /*
+     * loop over the game button options and add the listener on each
      */
-    
     for (let option of options) {
         option.addEventListener('click', function () {
             let playerChoice = this.getAttribute('data-choice');
@@ -40,28 +33,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 /** 
  * main function receives one parameter which is the value 
- * of the custom attribute (choice) applied to the buttons to recognize the type of selection.
+ * of the custom attribute (data-choice) applied to the buttons to recognize the type of selection.
  * Inspired from Love maths Project
  */
 function runGame(playerChoice) {
+    /** define a list to store the choices of the player */
     const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
     message.textContent = "";
     playerImage.src = `assets/images/${choices[playerChoice]}.png`;
     playerImage.alt = choices[playerChoice];
+    /** Crete arandom variable to pick an item from choices randomly */
     let randIndex = Math.floor(Math.random() * choices.length);
-   
     computererImage.src = `assets/images/${choices[randIndex]}.png`;
     computererImage.alt = choices[randIndex];
     console.log('done');
     checkWinner(choices[playerChoice], choices[randIndex]);
-    //let result = checkWinner(choices[playerChoice], choices[randIndex]);
-    //updateScore(result);
-    //checkScores(result);
 }
+
 /**
  * function tekes tow parameters whitch are values of the 'choices' array
  * and returns the result as string 
- * to determine the winner(player/computer)
+ * to determine the winner(player/computer/None)
  */
 function checkWinner(playerOption, computerOption) {
     try {
@@ -111,34 +103,28 @@ function checkWinner(playerOption, computerOption) {
         console.log('computerOption', computerOption);
         console.log('winner', winner);
         announce(winner);
-        //checkScores(result)
         updateScore(winner);
-        //return winner;
+
     } catch (err) {
         alert(`Unknoun ${playerOption}! , ${err}!`);
     }
     }
 
+/** Function to alert the winner */
 function announce(winner) {
     if (winner === "player") {
         alert("Yow earn 1 point");
-        //finalWinner(currenPlayertScore, currenComputertScore)
-        //playerScore.textContent = ++currenPlayertScore;
     } else if (winner === "computer") {
         alert("Computer earn 1 point");        
     } else if (winner === "None"){
         alert("It's a Tie!");
     }
 }
-    
-//}
-/**
- * function receives the winner to display the message in message div
- * and update the score of both player and computer.
+
+/*
+ * function receives the winner, and update the score accordingly,
+ * then call checkScores function.
  */
-
-
-
 function updateScore(winner) {
     try {
         let currenPlayertScore = parseInt(playerScore.textContent);
@@ -150,31 +136,28 @@ function updateScore(winner) {
             computerScore.textContent = ++currenComputertScore;
         } 
         checkScores(winner);
-        /*
-        else {
-            alert("It's a Draw!");
-        }*/
     } catch (err) {
         alert(`Anknoun ${winner}! , ${err}!`);
     }
 }
 
+/** Function recieves the winner to check scores after each updating then:
+ * -display appropriate message
+ * -add text to modal body with the final winner.
+ */
 function checkScores(result){
-
+    /** Retrieve the current scores from Dom. */
     let currenPlayertScore = parseInt(playerScore.textContent);
     let currenComputertScore = parseInt(computerScore.textContent);
     let text = `<p>Final winner is:<br> <span class="text-decoration-underline text-uppercase">${result}!</span></p>`;
     let modalBody = document.querySelector(".modal-body");
-    console.log('modalBody', modalBody);
-    console.log('text', text);
     try {
         if (currenPlayertScore == 5 && currenComputertScore == 5){
             message.textContent = "No one wins!";
             modalBody.innerHTML = text;
-            gameModal.show()
-        } 
+            gameModal.show();
+        }
         else if (currenPlayertScore == 5){
-             
             message.textContent = "Winner is You!";
             modalBody.innerHTML = text;
             gameModal.show();
@@ -183,50 +166,8 @@ function checkScores(result){
             message.textContent = "Winner is Computer!";
             modalBody.innerHTML = text;
             gameModal.show();
-        }/* else {
-            updateScore(result);
-        }*/
-    } catch(er) {
-        alert(`Unknown ${er}!`)
-    }
-}
-/*
-let times = 1;
-function checkCounter() {
-    if (times == 15) {
-        finalWinner();
-        computerScore.textContent = 0;
-        playerScore.textContent = 0;
-        times = 0;
-    }
-    times++;
-}
-
-*/
-
-/*
-function finalWinner(currenPlayertScore, currenComputertScore) {
-
-    //message.textContent = "Both scores are equal!";
-    //console.log("currenPlayertScore: ", currenPlayertScore, "currenComputertScore: ", currenComputertScore);
-    try {
-        if (currenPlayertScore == 5){
-            message.textContent = "Winner is Player";
-        } else if (currenComputertScore == 5){
-            message.textContent = "Winner is Computer";
-        }
-        else if (currenPlayertScore == currenComputertScore == 5){
-            message.textContent = "No one wins!";
         }
     } catch(er) {
         alert(`Unknown ${er}!`)
     }
-    
-
 }
-    
-    */
-        
-    
-
-
