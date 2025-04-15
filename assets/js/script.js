@@ -9,7 +9,7 @@ const playerImage = document.getElementById("player-image");
 const computererImage = document.getElementById("computer-image");
 const gameModal = new bootstrap.Modal(document.getElementById("gameModal"));
 const resetButtons = document.getElementsByClassName("reset-game");
-console.log(resetButtons);
+//console.log(resetButtons);
 //gameModal.show();
 
 /**
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener('click', function() {
             playerScore.textContent = 0;
             computerScore.textContent = 0;
-            message.textContent = "";
+            //message.textContent = "";
             console.log('okk')
         })
     }
@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function runGame(playerChoice) {
     const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+    message.textContent = "";
     playerImage.src = `assets/images/${choices[playerChoice]}.png`;
     playerImage.alt = choices[playerChoice];
     let randIndex = Math.floor(Math.random() * choices.length);
@@ -148,7 +149,7 @@ function updateScore(winner) {
         } else if (winner === "computer") {
             computerScore.textContent = ++currenComputertScore;
         } 
-        checkScores();
+        checkScores(winner);
         /*
         else {
             alert("It's a Draw!");
@@ -162,17 +163,25 @@ function checkScores(result){
 
     let currenPlayertScore = parseInt(playerScore.textContent);
     let currenComputertScore = parseInt(computerScore.textContent);
+    let text = `<p>Final winner is ${result}!</p>`;
+    let modalBody = document.querySelector(".modal-body");
+    console.log('modalBody', modalBody);
+    console.log('text', text);
     try {
         if (currenPlayertScore == 5 && currenComputertScore == 5){
             message.textContent = "No one wins!";
+            modalBody.innerHTML = text;
             gameModal.show()
         } 
         else if (currenPlayertScore == 5){
+             
             message.textContent = "Winner is You";
+            modalBody.innerHTML = text;
             gameModal.show();
         }
         else if (currenComputertScore == 5){
             message.textContent = "Winner is Computer";
+            modalBody.innerHTML = text;
             gameModal.show();
         }/* else {
             updateScore(result);
