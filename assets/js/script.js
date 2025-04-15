@@ -163,7 +163,7 @@ function checkScores(result){
 
     let currenPlayertScore = parseInt(playerScore.textContent);
     let currenComputertScore = parseInt(computerScore.textContent);
-    let text = `<p>Final winner is ${result}!</p>`;
+    let text = `<p>Final winner is:<br> <span class="text-decoration-underline text-uppercase">${result}!</span></p>`;
     let modalBody = document.querySelector(".modal-body");
     console.log('modalBody', modalBody);
     console.log('text', text);
@@ -175,12 +175,12 @@ function checkScores(result){
         } 
         else if (currenPlayertScore == 5){
              
-            message.textContent = "Winner is You";
+            message.textContent = "Winner is You!";
             modalBody.innerHTML = text;
             gameModal.show();
         }
         else if (currenComputertScore == 5){
-            message.textContent = "Winner is Computer";
+            message.textContent = "Winner is Computer!";
             modalBody.innerHTML = text;
             gameModal.show();
         }/* else {
