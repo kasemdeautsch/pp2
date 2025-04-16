@@ -1,18 +1,19 @@
 
-# Random Rock, Paper, Scissors (game) 
-The Random Rock, Paper, Scissors game is a simple  powerful game that as friends, colleaques and family play, they can learn to predict outcomes, understand probabilities, and develop the ability to think ahead.
+# Random Rock, Paper, Scissors, Lizard, Spock "RPSLS"(Version-1).
+The random "RPSLS" game is a simple  powerful game that as friends, colleaques and family play,\
+they can learn to predict outcomes, understand probabilities, and develop the ability to think ahead.\
 It allows people to choose role and find if they winn according to the role of the game.
-The game has totaly true results because the other cchoice is random.
+The game has totaly true results because the other choice is random.
 
-This game targets adults and children as well foster essential skills such as decision-making, strategic thinking, and social interaction
+This game targets adults and children as well foster essential skills such as decision-making, strategic thinking, and social interaction.
 
  
-![](/assets/images/readme/testing/responsive.png)
+![](/assets/images/readme/testing/main-game.png)
 
 ## Wireframing
 **Balsamiq**
-- I designed an inatial digital look of the game using the **Balsamiq wireframe desktop tool** so that  
-  the design in actual being simple and does not take time.
+- I designed an inatial digital look of the game using the **Balsamiq wireframe desktop tool**\
+  so that the design in actual being simple and does not take time.
 
   ![](/assets/images/readme/testing/wireframing.png)
   
@@ -22,43 +23,46 @@ This game targets adults and children as well foster essential skills such as de
 ## Features
 
 **Existing Features**
-
+- Version-1 features\
+  Please notice that in this version the game ends on 5 points for player/computer\.
+  When the modal appears click ok and the game will reset.
 - The Header
-  - The Header placed at the top of the page and shows the name of the game: Random Rock, Paper, Scissors
-    in a clear playfull font that contrasts with the background.
+  - The Header placed at the top of the page and shows the name of the game:\
+    Random Rock, Paper, Scissors, Lizard, Spock in a clear playfull font that contrasts with the background.
   - The header tells the user clearly what game they are playing.
 ![](/assets/images/readme/testing/header.png)
 
 - The Game Options
-  - The game options contain a clear instructions and a choice to play Rock, Paper or Scissors  
+  - The game options contain a clear instructions and a choice to play Rock, Paper or Scissors,..
   - The choices section is an interactive Buttons that allow the player to click and then choose the 
     appropriate role.
 
     ![](/assets/images/readme/testing/options.png)
-- The Results
-  * When the Players click a button the relevant image is displayed in their side of the game board.
-  + when a player clicks abutton the JavaScript code automaticaly chooses a random option(image) 
+- Playing
+  - When the Players click a button the relevant image is displayed in their side of the game board.
+  - When a player clicks abutton the JavaScript code automaticaly chooses a random option(image) 
     in the computer side of the game board.
-  * according to an algorithm the computer determines who is the winner.
-  - The winner is announced to the player under the options buttons and the result score is updated for 
-    either the player or the computer.
-  + The Result and the Score is displayed clearly to the user making it easy to understand
-      who has won and the resulted **Score**.
-      ![](/assets/images/readme/testing/result.png)
-- New Feature added
-  - After 5 times of playing the final **Winner** is announced and the scores are reseted.
-  ![](/assets/images/readme/testing/final-winner.png)
-- The footer
-  - The footer located in the bottom of the page and displays the rules of the game.
-  - The footer is available to the user because it clearly shows the rules to understand
-     how the game is played.
-     ![](/assets/images/readme/testing/footer.png)
-
+  - According to an algorithm the computer alerts that the computer or the winner\
+    earn 1 point.
+    ![](/assets/images/readme/testing/alert.png)
+  - If both computer and player chooses the same option it will be a tie\
+    and the scores remain the same.
+    ![](/assets/images/readme/testing/tie.png)
+- Reset the game:
+  - A button is added to reset the game.
+  - Alink beside the button opens in a new tab to see the rules and how to play.
+  ![](/assets/images/readme/testing/reset-game.png)
+- The results
+  - The result is announced in a modal with the winner (player/computer).
+  - the game will reset after that.
+  - You can't close the modal when clicking outside it.
+  - Clickin on (ok) or (X) will exit from the modal and reset game
+  
 **Features Left to Implement**
-- I would like to extend this game in the future to  **rock paper scissors lizard spock**.
+- I would like to extend this game in the future to  have the ability of game-continue.
 ## Testing
   - The game works on different web browsers like Chrome, Firefox and Edge.
-  - The results are always correct.
+  - The results are always correct, according to it's rules.
   - The web site is responsive and looks good on standard screen sizes using devtools device toolbar.
   - The header, instructions, options, results, and footer text is readable and easy to understand.
   
@@ -74,10 +78,14 @@ This game targets adults and children as well foster essential skills such as de
 
 
      ![](/assets/images/readme/testing/testing.png)
+     ![](/assets/images/readme/testing/desktop-testing.png)
      
      
 
 **Bugs**
+  - In the previous version, the message of the winner was inconsistent, I fixed that with\
+    Js code so that it appears on final result and only scores updated when a points occur.
+
   - When I deployed my project to github, I noticed that the  links to (css, js) were broken, \
     the reason was that i used the absolute file path:\
     `<link rel="stylesheet" href="/assets/css/style.css">`
@@ -100,7 +108,7 @@ This game targets adults and children as well foster essential skills such as de
        <a href="http://jigsaw.w3.org/css-validator/check/referer">
         <img style="border:0;width:88px;height:31px"
             src="http://jigsaw.w3.org/css-validator/images/vcss"
-            alt="Valid CSS!" />
+            alt="Valid CSS!." />
        </a>
     </p>
     
@@ -121,15 +129,21 @@ This game targets adults and children as well foster essential skills such as de
     - Select the relevent branch (*main* in my case).
     - Make sure the /(root) directory is selected and klick **Save**.
     - Once the branch has been selected, the page provides the link to the deployed project.
-    - The live link can be found [here](https://github.com/kasemdeautsch/pp2).
-    - in the repository on the right menue under **Deplpyments** click on** github-pages**.
+    - The live link can be found [here](https://kasemdeautsch.github.io/pp2/).
+    - In the repository on the right menue under **Deplpyments** click on** github-pages**.
 
 ## Credits
 - Content
-  - The page design and Project idea was taken from **Portfolio Project Scope** module in our course.
+  - The page design and Project idea was taken from **Code Institute** module in our course.
+  - I captured the images from a project on **Github**, and when I wanted later to document that\
+    I didn't find after I researched, I will mention that project name when I find the website.
   - Some functions idea ware taken from **Love Maths** project
-  - The following websites ware used for problem solving.
+  - The following websites were used for problem solving.
     - **https://www.diffchecker.com/**.
+    - **https://ui.dev/amiresponsive**.
+    - **https://validator.w3.org/**.
+    - **https://jigsaw.w3.org/css-validator/**
+    - **https://jshint.com/**.
     - **https://stackoverflow.com/**.
     - **https://www.w3schools.com/**.
     - **https://www.perplexity.ai/**.
@@ -138,5 +152,5 @@ This game targets adults and children as well foster essential skills such as de
     -  **https://balsamiq.com/**.
 
 - Media
-  - I found the images for the (Rock Paper Scissors) in Google.
+  - I found some images for the (Rock Paper Scissors,..) in Google.
   

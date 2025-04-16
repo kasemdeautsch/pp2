@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener('click', function() {
             playerScore.textContent = 0;
             computerScore.textContent = 0;
-        })
+        });
     }
 
     /*
@@ -168,6 +168,6 @@ function checkScores(result){
             gameModal.show();
         }
     } catch(er) {
-        alert(`Unknown ${er}!`)
+        alert(`Unknown ${er}!`);
     }
 }

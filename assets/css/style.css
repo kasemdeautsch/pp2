@@ -18,11 +18,10 @@
      min-height: 100vh;
      background-color: rgb(232, 245, 174);
      font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
+     /*font-optical-sizing: auto;*/
+     font-weight: 600;
+     font-style: normal;
+     font-variation-settings: "wdth" 100;
      display: flex;
      flex-direction: column;
      color: #3a3a3a;
@@ -32,7 +31,7 @@
  header {
      background-color: rgba(226, 125, 43, 0.973);
      text-align: center;
-     height: 60px;
+     height: auto;
      color: black;
  }
 
@@ -126,10 +125,12 @@
  .score {
      margin-bottom: 5px;
  }
- .gr-buttons {
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
+ .rules {
+    background-color: white;
+    color: #000;
+ }
+ .hidden {
+    display: none;
  }
  /*footer*/
  footer {
@@ -162,8 +163,8 @@
      font-weight: 700 !important;
      background: url("../images/galaxy.jpg");
      background-size: cover;
-     -webkit-text-fill-color: transparent;
-     -webkit-background-clip: text;
+     /*-webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;*/
      background-clip: text;
  }
 
