@@ -149,7 +149,12 @@ function checkScores(result){
     /** Retrieve the current scores from Dom. */
     let currenPlayertScore = parseInt(playerScore.textContent);
     let currenComputertScore = parseInt(computerScore.textContent);
-    let text = `<p>Final winner is:<br> <span class="text-decoration-underline text-uppercase">${result}!</span></p>`;
+    let text = `<p>Final Scores:<br> 
+                Player: ${currenPlayertScore}<br>
+                Computer: ${currenComputertScore}<br>
+                Winner is <span class="text-decoration-underline text-uppercase">${result}!</span><br>
+                Please click "Ok" or "X" to exit, The scores will reset automatically.
+                </p>`;
     let modalBody = document.querySelector(".modal-body");
     try {
         if (currenPlayertScore == 5 && currenComputertScore == 5){
