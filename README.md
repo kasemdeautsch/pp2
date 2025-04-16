@@ -2,7 +2,7 @@
 # Random Rock, Paper, Scissors, Lizard, Spock "RPSLS"(Version-1).
 The random "RPSLS" game is a simple  powerful game that as friends, colleaques and family play,\
 they can learn to predict outcomes, understand probabilities, and develop the ability to think ahead.\
-It allows people to choose role and find if they winn according to the role of the game.
+It allows people to choose role and find if they winn according to the rules of the game.
 The game has totaly true results because the other choice is random.
 
 This game targets adults and children as well foster essential skills such as decision-making, strategic thinking, and social interaction.
@@ -10,7 +10,7 @@ This game targets adults and children as well foster essential skills such as de
  
 ![](/assets/images/readme/testing/main-game.png)
 
-## Wireframing
+## Wireframing:
 **Balsamiq**
 - I designed an inatial digital look of the game using the **Balsamiq wireframe desktop tool**\
   so that the design in actual being simple and does not take time.
@@ -20,10 +20,10 @@ This game targets adults and children as well foster essential skills such as de
   ![](/assets/images/readme/testing/wireframing-mobile.png)
 
 
-## Features
+## Features:
 
 **Existing Features**
-- Version-1 features\
+- Version-1 features:\
   Please notice that in this version the game ends on 5 points for player/computer\.
   When the modal appears click ok and the game will reset.
 - The Header
@@ -42,25 +42,28 @@ This game targets adults and children as well foster essential skills such as de
   - When the Players click a button the relevant image is displayed in their side of the game board.
   - When a player clicks abutton the JavaScript code automaticaly chooses a random option(image) 
     in the computer side of the game board.
-  - According to an algorithm the computer alerts that the computer or the winner\
-    earn 1 point.
+  - According to an algorithm the computer alerts that the computer or the player earn 1 point.
     ![](/assets/images/readme/testing/alert.png)
-  - If both computer and player chooses the same option it will be a tie\
+  - If both computer and player chooses the same option it will be a Tie\
     and the scores remain the same.
     ![](/assets/images/readme/testing/tie.png)
 - Reset the game:
-  - A button is added to reset the game.
-  - Alink beside the button opens in a new tab to see the rules and how to play.
+  - A button is added to reset the game at any time.
+  - A link beside the button opens in a new tab to see the rules and how to play.
   ![](/assets/images/readme/testing/reset-game.png)
 - The results
   - The result is announced in a modal with the winner (player/computer).
   - the game will reset after that.
   - You can't close the modal when clicking outside it.
-  - Clickin on (ok) or (X) will exit from the modal and reset game
+  - Clicking on (ok) or (X) will exit from the modal and reset game
+- The Footer:
+  - The footer is pushed down and shows the rules.
+  - Both heade and footer have the same color for consistent look.
+    ![](/assets/images/readme/testing/footer.png)
   
-**Features Left to Implement**
+**Features Left to Implement:**
 - I would like to extend this game in the future to  have the ability of game-continue.
-## Testing
+## Testing:
   - The game works on different web browsers like Chrome, Firefox and Edge.
   - The results are always correct, according to it's rules.
   - The web site is responsive and looks good on standard screen sizes using devtools device toolbar.
@@ -82,21 +85,21 @@ This game targets adults and children as well foster essential skills such as de
      
      
 
-**Bugs**
+**Bugs:**
   - In the previous version, the message of the winner was inconsistent, I fixed that with\
-    Js code so that it appears on final result and only scores updated when a points occur.
+    Js code so that it appears on final result and only scores updated when points occur.
 
   - When I deployed my project to github, I noticed that the  links to (css, js) were broken, \
-    the reason was that i used the absolute file path:\
+    the reason was that I used the absolute file path:\
     `<link rel="stylesheet" href="/assets/css/style.css">`
   - To fix that I removed the / from the starting.
 
 
-**Unfixed Bugs**
+**Unfixed Bugs:**
   - No unfixed bugs.
 
   
-**Validator Testing**
+**Validator Testing:**
   - HTML
     - I tested the website and no errors were returned when passing through the official W3C validator
     ![](/assets/images/readme/testing/html-validator.png)
@@ -104,14 +107,6 @@ This game targets adults and children as well foster essential skills such as de
     ![](/assets/images/readme/testing/errorpage.png)
     
   - CSS 
-    <p>
-       <a href="http://jigsaw.w3.org/css-validator/check/referer">
-        <img style="border:0;width:88px;height:31px"
-            src="http://jigsaw.w3.org/css-validator/images/vcss"
-            alt="Valid CSS!." />
-       </a>
-    </p>
-    
     - No errors were found when passing through the official (Jigsaw) validator
       ![](/assets/images/readme/testing/css-validator.png)
   - Accesibility
