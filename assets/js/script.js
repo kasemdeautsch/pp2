@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
             computerScore.textContent = 0;
         });
     }
-
     /*
      * loop over the game button options and add the listener on each
      */
@@ -46,10 +45,8 @@ function runGame(playerChoice) {
     let randIndex = Math.floor(Math.random() * choices.length);
     computererImage.src = `assets/images/${choices[randIndex]}.png`;
     computererImage.alt = choices[randIndex];
-    console.log('done');
     checkWinner(choices[playerChoice], choices[randIndex]);
 }
-
 /**
  * function tekes tow parameters whitch are values of the 'choices' array
  * and returns the result as string 
@@ -99,17 +96,12 @@ function checkWinner(playerOption, computerOption) {
                 winner = "computer";
             }
         }
-        console.log('playerOption', playerOption);
-        console.log('computerOption', computerOption);
-        console.log('winner', winner);
         announce(winner);
         updateScore(winner);
-
     } catch (err) {
         alert(`Unknoun ${playerOption}! , ${err}!`);
     }
     }
-
 /** Function to alert the winner */
 function announce(winner) {
     if (winner === "player") {
@@ -120,7 +112,6 @@ function announce(winner) {
         alert("It's a Tie!");
     }
 }
-
 /*
  * function receives the winner, and update the score accordingly,
  * then call checkScores function.
@@ -129,7 +120,6 @@ function updateScore(winner) {
     try {
         let currenPlayertScore = parseInt(playerScore.textContent);
         let currenComputertScore = parseInt(computerScore.textContent);
-        
         if (winner === "player") {
             playerScore.textContent = ++currenPlayertScore;
         } else if (winner === "computer") {
@@ -158,7 +148,7 @@ function checkScores(result){
     let modalBody = document.querySelector(".modal-body");
     try {
         if (currenPlayertScore == 5 && currenComputertScore == 5){
-            message.textContent = "No one wins!";
+            message.textContent = "Dwaw, No one wins!";
             modalBody.innerHTML = text;
             gameModal.show();
         }

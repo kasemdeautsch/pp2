@@ -2,7 +2,7 @@
 # Random Rock, Paper, Scissors, Lizard, Spock "RPSLS"(Version-1).
 The random "RPSLS" game is a simple  powerful game that as friends, colleaques and family play,\
 they can learn to predict outcomes, understand probabilities, and develop the ability to think ahead.\
-It allows people to choose role and find if they winn according to the rules of the game.
+It allows people to choose role and find if they win according to the rules of the game.
 The game has totaly true results because the other choice is random.
 
 This game targets adults and children as well foster essential skills such as decision-making, strategic thinking, and social interaction.
@@ -58,7 +58,7 @@ This game targets adults and children as well foster essential skills such as de
   - Clicking on (ok) or (X) will exit from the modal and reset game
 - The Footer:
   - The footer is pushed down and shows the rules.
-  - Both heade and footer have the same color for consistent look.
+  - Both header and footer have the same color for consistent look.
     ![](/assets/images/readme/testing/footer.png)
   
 **Features Left to Implement:**
